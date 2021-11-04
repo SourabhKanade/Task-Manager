@@ -24,3 +24,6 @@
 .new-expense__actions {
   text-align: right;
 }
+.new-expense__actions :hover {
+  background-color:#40005d;
+}

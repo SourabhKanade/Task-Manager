@@ -29,9 +29,12 @@ const App = () => {
       date: new Date(Date.UTC(2021, 8, 10))
     },
   ];
+  const addExpenseData = (expense) => {
+    console.log(expense)
+  }
   return (
     <>
-    <NewExpense />
+    <NewExpense onaddExpenseData={addExpenseData}/>
     <Expenses data={Items}/>
   </>
   );
