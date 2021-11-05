@@ -30,7 +30,7 @@ const App = () => {
     },
   ];
   const addExpenseData = (expense) => {
-    console.log(expense)
+  console.log(expense)
   }
   return (
     <>
