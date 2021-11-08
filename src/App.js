@@ -1,9 +1,8 @@
+import React, { useState } from 'react';
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/Expenses/NewExpense/NewExpense";
 
-const App = () => {
-
-  const Items = [
+const Items = [
     {
       id: '01',
       title: 'football',
@@ -16,26 +15,20 @@ const App = () => {
       amount: 598.17,
       date: new Date(Date.UTC(2021, 1, 20))
     },
-    {
-      id: '03',
-      title: 'udemy', 
-      amount: 454.17, 
-      date: new Date(Date.UTC(2021, 4, 25))
-    },
-    {
-      id: '04', 
-      title: 'unit-test', 
-      amount: 234.17, 
-      date: new Date(Date.UTC(2021, 8, 10))
-    },
   ];
+  
+  const App = () => {
+  const [slots, setslots] = useState(Items)
+  
   const addExpenseData = (expense) => {
-  console.log(expense)
-  }
+    setslots((prevSlots) => {
+      return [expense, ...prevSlots]
+    });
+  };
   return (
     <>
     <NewExpense onaddExpenseData={addExpenseData}/>
-    <Expenses data={Items}/>
+    <Expenses data={slots}/>
   </>
   );
 }

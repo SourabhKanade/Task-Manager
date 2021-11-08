@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './NewExpense.css';
 import NewExpenseForm from './NewExpenseForm';
 
