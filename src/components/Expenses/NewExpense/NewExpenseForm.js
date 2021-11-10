@@ -24,7 +24,7 @@ const submitHandler = (event) => {
   const ExpenseData = {
     title : enteredTitle, 
     amount : enteredAmount,
-    date : enteredDate
+    date: new Date(enteredDate),
  };
     props.onsaveExpensedata(ExpenseData)
     setEnteredTitle('')
@@ -42,11 +42,11 @@ return (
         </div>
         <div className="new-expense__control">
         <label>Amount</label>
-        <input type="number" min='0.5' step='0.01' value={enteredAmount} onChange={amountChangeHandler}/>
+        <input type="number" min='0.1' step='0.1' value={enteredAmount} onChange={amountChangeHandler}/>
         </div>
         <div className="new-expense__control">
         <label>Date</label>
-        <input type="date" min='22-10-2021' max='22-10-2022' value={enteredDate} onChange={dateChangeHandler}/>
+         <input type='date' min='01-01-2019' max='31-12-2022' value={enteredDate} onChange={dateChangeHandler}/>
         </div>
          </div>
         <div className="new-expense__actions">
@@ -58,4 +58,4 @@ return (
   )
 }
 
-export default NewExpenseForm
+export default NewExpenseForm;
