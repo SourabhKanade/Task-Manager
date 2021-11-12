@@ -16,7 +16,7 @@ function NewExpense(props) {
 
 const changePageHandler = () => {
   settoggle(true);
- }
+}
 
 const cancelPageHandler = () => {
  console.log('cancel clicked');
